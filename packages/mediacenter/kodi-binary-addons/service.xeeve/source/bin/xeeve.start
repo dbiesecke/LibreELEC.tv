@@ -4,7 +4,7 @@
 # Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
 
 . /etc/profile
-oe_setup_addon xeeve
+oe_setup_addon service.xeeve
 
 config="settings.json"
 link="/storage/.xteve/settings.json"
