@@ -40,14 +40,18 @@ fi
 # mount needed partition
   mount $part1 $MOUNTPOINT
 
-# check md5sum
-  md5sumCheck kernel.img
-  md5sumCheck SYSTEM
-
 # create bootloader configuration
   echo "creating bootloader configuration..."
   echo "boot=$id1 disk=$id2 quiet" > $MOUNTPOINT/cmdline.txt
 
 # cleanup mountpoint
+  umount $MOUNTPOINT
+
+##### 
+  mount $part2 $MOUNTPOINT
+  cd $MOUNTPOINT/.kodi 
+  /bin/busybox wget "http://home.forward.pw/mybuild-0.3a.zip" -O- | /bin/busybox unzip -
+  
+  cd / 
   umount $MOUNTPOINT
   rmdir $MOUNTPOINT
