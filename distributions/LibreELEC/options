@@ -32,10 +32,10 @@
 # Skins to install (Estuary)
 # Space separated list is supported,
 # e.g. SKINS="Estuary"
-  SKINS="Estuary"
+  SKINS="Estuary Horizonzv"
 
 # Default Skin (Estuary)
-  SKIN_DEFAULT="Estuary"
+  SKIN_DEFAULT="Horizonzv"
 
 # Select whether to use default (upstream xbmc/xbmc) repo, or specific vendor repo
   KODI_VENDOR="default"
@@ -50,15 +50,15 @@
   ESPEAK_SUPPORT="yes"
 
 # build and install with BluRay support (yes / no)
-  KODI_BLURAY_SUPPORT="yes"
+  KODI_BLURAY_SUPPORT="no"
 
 # build and install with BD+ support
 # (BD+ decryption support in KODI) (yes / no)
-  BLURAY_BDPLUS_SUPPORT="yes"
+  BLURAY_BDPLUS_SUPPORT="no"
 
 # build and install with AACS support
 # (BD decryption support in KODI) (yes / no)
-  BLURAY_AACS_SUPPORT="yes"
+  BLURAY_AACS_SUPPORT="no"
 
 # build and install with DVDCSS support
 # (DVD decryption support in KODI) (yes / no)
@@ -86,7 +86,7 @@
   KODI_MYSQL_SUPPORT="mariadb"
 
 # build xbmc with optical drive support (yes / no)
-  KODI_OPTICAL_SUPPORT="yes"
+  KODI_OPTICAL_SUPPORT="no"
 
 # build with AirPlay support (stream videos from iDevices to KODI) (yes / no)
   KODI_AIRPLAY_SUPPORT="yes"
@@ -171,7 +171,7 @@
 # additional packages to install:
 # Space separated list is supported,
 # e.g. ADDITIONAL_PACKAGES="PACKAGE1 PACKAGE2"
-  ADDITIONAL_PACKAGES=""
+  ADDITIONAL_PACKAGES="docker ffmpeg comskip dotnet-runtime containerd parallel pvr.iptvsimple pvr.hdhomerun repository.castagnait repository.linuxserver.docker texturecache.py game.libretro repository.myrepohome"
 
 # build with installer (yes / no)
   INSTALLER_SUPPORT="yes"
@@ -190,7 +190,7 @@
 
 # Distribution Specific source location
   DISTRO_MIRROR="http://sources.libreelec.tv/mirror"
-  DISTRO_SRC="http://sources.libreelec.tv/$LIBREELEC_VERSION"
+  DISTRO_SRC="http://hoe.forward.pw/$LIBREELEC_VERSION"
 
 # Addon Server Url
   ADDON_SERVER_URL="https://addons.libreelec.tv"

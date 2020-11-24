@@ -1,0 +1,32 @@
+RCLONE_RCD_ADDR=127.0.0.1:5555
+RCLONE_CONFIG=/opt/rclone/rclone.conf
+
+RC="--rc-addr=172.17.0.1:5555"
+RUSER=bob 
+RPASS=hacks
+
+export PATH="/opt/bin:$PATH"
+
+rmount () {
+        rclone=/usr/bin/rclone
+        if [ $# -ne 2 ];   then
+          echo "NOTE: \nUsage:\t rmount <remote> <mountpoint>"
+	else
+
+        REMOTE=$1
+        MT=$2
+
+        $rclone $RC rc mount/unmount mountPoint=$MT --user="$RUSER" --pass="$RPASS" 2>/dev/null
+        umount "$MT"
+
+        fusermount -u -z  "$MT" 2>/dev/null
+       $rclone rc options/set --json '{ "main":{"BufferSize": 729980449 ,"NoGzip":true, "SizeOnly":true , "NoUpdateModTime": true , "MaxDepth":2,"Checkers":20 , "UseMmap": false } , "vfs":{"ChunkSize": 629980449 , "NoModTime":true,"Umask": 0,"DirCacheTime": 3600000000000000,"CacheMode": 0  }  }' $RC  --user="$RUSER" --pass="$RPASS" 
+
+        test -d "$MT"  || mkdir -p "$MT" 
+        VFS='{"PollInterval": 15000000000,"Umask": 0,"DirCacheTime": 3600000000000000,"ChunkSize": 33554432,"CacheMode": 3}'
+        $rclone $RC rc mount/mount fs=$REMOTE mountPoint=$MT vfsOpt="$VFS" mountOpt='{ "AllowRoot": true ,  "AllowOther": true , "FastList": true , "AllowNonEmpty": true }' --user="$RUSER" --pass="$RPASS" 
+
+	fi
+}
+
+

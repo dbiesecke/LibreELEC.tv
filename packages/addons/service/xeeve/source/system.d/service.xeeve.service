@@ -1,0 +1,11 @@
+[Unit]
+Description=Xteve IPTV
+After=kodi.service network-online.target 
+Requires=kodi.service network-online.target 
+
+[Service]
+ExecStart=/bin/sh /storage/.kodi/addons/service.xeeve/bin/xeeve.start
+Restart=always
+
+[Install]
+WantedBy=kodi.target

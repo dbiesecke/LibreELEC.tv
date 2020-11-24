@@ -19,6 +19,11 @@
           <path pathversion="1">/storage/music/</path>
           <allowsharing>true</allowsharing>
       </source>
+        <source>
+            <name>HiDrive</name>
+            <path pathversion="1">davs://nmc-gast:nmckdg123@webdav.hidrive.strato.com:443/public/Musik/</path>
+            <allowsharing>true</allowsharing>
+        </source>        
   </music>
   <pictures>
       <default pathversion="1"></default>
@@ -28,4 +33,27 @@
           <allowsharing>true</allowsharing>
       </source>
   </pictures>
+    <files>
+        <default pathversion="1">source</default>
+        <source>
+            <name>HiDrive XBMC</name>
+            <path pathversion="1">davs://nmc-gast:nmckdg123@webdav.hidrive.strato.com:443/public/XBMC/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>Androidtvgeek Repo</name>
+            <path pathversion="1">http://repository.androidtvgeek.com/zips/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>KDC Germany (XStream)</name>
+            <path pathversion="1">https://kdc-repo.website/repo-beta/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>HiDrive playlist</name>
+            <path pathversion="1">davs://nmc-gast:nmckdg123@webdav.hidrive.strato.com:443/public/playlist/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+    </files>  
 </sources>
