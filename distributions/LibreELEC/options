@@ -35,7 +35,7 @@
   SKINS="Estuary Horizonzv"
 
 # Default Skin (Estuary)
-  SKIN_DEFAULT="Horizonzv"
+  SKIN_DEFAULT="Estuary"
 
 # Select whether to use default (upstream xbmc/xbmc) repo, or specific vendor repo
   KODI_VENDOR="default"
@@ -171,7 +171,7 @@
 # additional packages to install:
 # Space separated list is supported,
 # e.g. ADDITIONAL_PACKAGES="PACKAGE1 PACKAGE2"
-  ADDITIONAL_PACKAGES="docker ffmpeg comskip dotnet-runtime containerd parallel pvr.iptvsimple pvr.hdhomerun repository.castagnait repository.linuxserver.docker texturecache.py game.libretro repository.myrepohome"
+  ADDITIONAL_PACKAGES="docker ffmpeg comskip dotnet-runtime containerd parallel pvr.iptvsimple pvr.hdhomerun repository.castagnait repository.linuxserver.docker texturecache.py game.libretro repository.myrepohome pvr.iptvsimple pvr.hdhomerun service.system.docker service.xeeve"
 
 # build with installer (yes / no)
   INSTALLER_SUPPORT="yes"
@@ -193,7 +193,7 @@
   DISTRO_SRC="http://hoe.forward.pw/$LIBREELEC_VERSION"
 
 # Addon Server Url
-  ADDON_SERVER_URL="https://addons.libreelec.tv"
+  ADDON_SERVER_URL="http://home.forward.pw/repo/"
 
 # set the addon dirs
   ADDON_PATH="$ADDON_VERSION/${DEVICE:-$PROJECT}/$TARGET_ARCH"
